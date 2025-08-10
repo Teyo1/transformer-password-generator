@@ -15,7 +15,7 @@ setup(
     name="transformer-password-generator",
     version="1.0.0",
     author="Teijo Raiskio",
-    author_email="teijo@teijjo.fi",
+    author_email="",
     description="A character-level Transformer model for password generation and analysis",
     long_description=long_description,
     long_description_content_type="text/markdown",
