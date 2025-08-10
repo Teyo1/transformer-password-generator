@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+"""
+Setup script for Transformer Password Generator
+"""
+
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+with open("requirements.txt", "r", encoding="utf-8") as fh:
+    requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+
+setup(
+    name="transformer-password-generator",
+    version="1.0.0",
+    author="Teijo Raiskio",
+    author_email="teijo@teijjo.fi",
+    description="A character-level Transformer model for password generation and analysis",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/teyo1/transformer-password-generator",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Education",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Topic :: Security",
+        "Topic :: Education",
+    ],
+    python_requires=">=3.8",
+    install_requires=requirements,
+    extras_require={
+        "dev": [
+            "pytest>=6.0",
+            "black>=21.0",
+            "flake8>=3.8",
+            "mypy>=0.800",
+        ],
+    },
+    entry_points={
+        "console_scripts": [
+            "transformer-password-demo=example_usage:main",
+        ],
+    },
+    include_package_data=True,
+    zip_safe=False,
+    keywords=[
+        "transformer",
+        "password",
+        "generation",
+        "ai",
+        "machine-learning",
+        "cybersecurity",
+        "education",
+        "research",
+    ],
+    project_urls={
+        "Bug Reports": "https://github.com/teyo1/transformer-password-generator/issues",
+        "Source": "https://github.com/teyo1/transformer-password-generator",
+        "Documentation": "https://github.com/teyo1/transformer-password-generator#readme",
+    },
+)
